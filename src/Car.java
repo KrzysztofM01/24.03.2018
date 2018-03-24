@@ -1,3 +1,5 @@
+import java.util.Comparator;
+
 public class Car {
     private String brand, color, model, registrationName;
     private int power, engineCapacity;
@@ -75,6 +77,13 @@ public class Car {
                 ", engineCapacity=" + engineCapacity +
                 ", avgFuelConsumption=" + avgFuelConsumption +
                 ", registrationName='" + registrationName+ '\'' + " ";
+    }
+
+    public static class CarComparator2 implements Comparator<Car>{
+        @Override
+        public int compare(Car o1, Car o2) {
+            return o1.getPower() - o2.getPower();
+        }
     }
 }
 

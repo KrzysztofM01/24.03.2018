@@ -27,27 +27,33 @@ public class Flow {
 
     private static void typeCarFlow() {
         int input = Menu.carTypeScreen();
-        CarDataWrapper carDataWrapper = readMainParameters();
-        Scanner scanner = new Scanner(System.in);
+
         switch (input) {
             case 1:
+                CarDataWrapper carDataWrapper = readMainParameters();
+                Scanner scanner = new Scanner(System.in);
                 System.out.print("Seat numbers: ");
                 int seatNumber = scanner.nextInt();
                 FamilyCar fc = new FamilyCar(carDataWrapper, seatNumber);
                 break;
             case 2:
+                CarDataWrapper carDataWrapper2 = readMainParameters();
+                Scanner scanner2 = new Scanner(System.in);
                 System.out.print("Seat numbers: ");
-                int seatsNumber = scanner.nextInt();
+                int seatsNumber = scanner2.nextInt();
                 System.out.print("Standing places: ");
-                int standingPlaces = scanner.nextInt();
+                int standingPlaces = scanner2.nextInt();
                 System.out.print("Length: ");
-                double length = scanner.nextDouble();
+                double length = scanner2.nextDouble();
                 System.out.print("Height: ");
-                double height = scanner.nextDouble();
-                Bus bus = new Bus(carDataWrapper, seatsNumber, standingPlaces, length, height);
+                double height = scanner2.nextDouble();
+                Bus bus = new Bus(carDataWrapper2, seatsNumber, standingPlaces, length, height);
                 break;
             case 3:
-                System.out.println("wololo");
+                break;
+            case 4:
+                break;
+            case 5:
                 break;
 
         }
